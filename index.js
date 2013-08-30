@@ -5,9 +5,14 @@
 
 var redisConfig = {
     port: 6379,
-    host: 'localhost',
+    host: 'redis1.vmc.loc',
     options: {}
-};
+},
+    redisLocalhostConfig = {
+        port: 6379,
+        host: 'localhost',
+        options: {}
+    };
 
 var os = require('os'),
     worker = require('monitor-worker');
@@ -21,8 +26,8 @@ monitor.register(function(err){
     }
 });
 worker.registerWatchers(monitor, ['total-cpu', 'total-memory', 'redis-memory', 'redis-data-size', 'redis-commands'], {
-    'redis-memory': redisConfig,
-    'redis-data-size': redisConfig,
-    'redis-commands': redisConfig
+    'redis-memory': redisLocalhostConfig,
+    'redis-data-size': redisLocalhostConfig,
+    'redis-commands': redisLocalhostConfig
 });
 
