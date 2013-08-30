@@ -1,0 +1,14 @@
+{
+  "name": "redis-monitor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andy@away.name",
+  "license": "BSD",
+  "dependencies": {
+    "monitor-worker": "git://github.com/a696385/monitor-worker.git"
+  }
+}
